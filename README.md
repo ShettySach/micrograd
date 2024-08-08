@@ -46,8 +46,6 @@ cargo run --example readme
 ```
 
 ```
-# Printing of g.tree()
-
 g.data = 24.7041
 a.grad = 138.8338
 b.grad = 645.5773
@@ -233,44 +231,9 @@ fn main() {
 cargo run --example test_mnist
 ```
 
-```
-# ...
-
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □
-□ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ □ ■ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ □ □ □ □ □ □ □
-□ □ □ □ □ ■ ■ ■ □ □ □ □ □ □ □ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □
-□ □ □ □ □ ■ ■ ■ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □
-□ □ □ □ □ ■ ■ ■ ■ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-□ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □
-ytrue: 5
-ypred: 5
-prob: 0.822
-pred: true
-
-# ...
-```
+<div "align: center;">
+    <img src="mnist.gif" width="55%">
+</div>
 
 ---
 
@@ -289,18 +252,23 @@ use ferrograd::{
 };
 
 fn main() {
-    let (xs, ys) = read_csv("data/moons_data.csv", 2, 1, 1);
+    let (xs, ys) = read_csv("data/moons_data.csv", &[0, 1], &[2], 1);
 
     let model = MultiLayerPerceptron::new(2, vec![16, 16, 1], Activation::ReLU);
-    println!("Model - \n{}", model);
-    println!("Number of parameters = {}\n", model.parameters().len());
+    println!("{}", model);
+    println!("Number of parameters: {}\n", model.parameters().len());
 
     let mut optim = SGD::new(model.parameters(), 0.1, 0.9);
     let loss = HingeLoss::new();
     let accuracy = BinaryAccuracy::new(0.0);
 
+    println!(
+        "Optimiser: {:#?}\n\nCriterion: {:#?}\n\nMetric: {:#?}\n",
+        optim, loss, accuracy
+    );
+
     (0..100).for_each(|k| {
-        let ypred: Vec<Vec<Value>> = model.forward(&xs);
+        let ypred = model.forward(&xs);
 
         let data_loss = loss.loss(&ypred, &ys);
         let reg_loss = l2_regularization(0.0001, model.parameters());
@@ -320,6 +288,7 @@ fn main() {
         );
     });
 
+    println!();
     print_grid(&model, 15);
 }
 
@@ -400,7 +369,7 @@ Accuracy metrics
 >
 > - Created for educational purposes and not optimized for performance.
 >   - Uses scalar values (`Value`) and operations. `Vec<Value>` and `Vec<Vec<Value>>` are used in place of tensors.
->   - Negation and subtraction invole multiplication with -1 and division involves raising to the power -1, similar to how it's implemented in micrograd.
+>   - Negation and subtraction invole multiplication with -1 and division involves raising to the power -1, instead of direct implementations, similar to how it's implemented in micrograd.
 > - Run examples with the `release` flag (`cargo run --release --example <example>`) for more optimized performance.
 
 ###### Credits
